@@ -12,7 +12,7 @@ Dynamic Task Addition: Add new items instantly using a form submit event.
 Toggle Completion: Click the task text to toggle the "completed" status (strike-through).
 Deletion: Use the trash icon to instantly remove tasks with a smooth fade-out effect.
 Event Delegation: A single click handler on the parent list element manages all interaction (delete and complete) for new and existing items, showcasing efficient DOM handling.
-Semantic HTML: Uses correct elements like <header>, <main>, and <footer>.
+Semantic HTML: Uses correct elements like "<header>", "<main>", and "<footer>".
 
 🛠️ Tech Stack
 
@@ -31,4 +31,4 @@ This project successfully demonstrates proficiency in:
 5. Using Git workflow and deployment via GitHub Pages.
 
 ---
-*Created by [Jose Lemus]*
+*Created by Jose Lemus
