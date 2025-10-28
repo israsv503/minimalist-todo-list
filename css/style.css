@@ -133,3 +133,27 @@ footer {
   padding-top: 10px;
   border-top: 1px solid #eee;
 }
+
+/* ---------------------------------- */
+/* Disclosure Banner Styling */
+/* ---------------------------------- */
+#disclosure-banner {
+  position: absolute;
+  /* Positioned relative to the viewport/body */
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #ffc107;
+  /* Warning yellow */
+  color: #333;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+  z-index: 10;
+  /* Ensures it sits on top of everything */
+}
+
+#disclosure-banner p {
+  margin: 0;
+  padding: 0;
+}
