@@ -3,13 +3,13 @@ const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const todoList = document.getElementById("todo-list");
 
-//  2. Initial Setup (Remove the placeholder item)
-// We remove the static example item from the HTML so the list starts clean.
-// This is done by selecting all 'li' items and removing the first one found.
-const placeholderItem = document.querySelector(".todo-item");
-if (placeholderItem) {
-  placeholderItem.remove();
-}
+// //  2. Initial Setup (Remove the placeholder item)
+// // We remove the static example item from the HTML so the list starts clean.
+// // This is done by selecting all 'li' items and removing the first one found.
+// const placeholderItem = document.querySelector(".todo-item");
+// if (placeholderItem) {
+//   placeholderItem.remove();
+// }
 
 /**
  * Creates and returns a new list item (li) element for a given task text.
@@ -42,27 +42,35 @@ function createListItem(taskText) {
  * Handles the form submission event to add a new task.
  * @param {Event} event - The form submission event.
  */
-function addTask(event) {
-  // 1. Prevent the default form submission (which reloads the page)
-  event.preventDefault();
 
-  const taskText = todoInput.value.trim();
+  function addTask(event) {
+    // 1. Prevent the default form submission (which reloads the page)
+    event.preventDefault();
 
-  // 2. Check if the input is empty
-  if (taskText === "") {
-    alert("Please enter a task.");
-    return; // Stop the function if empty
-  }
+    const taskText = todoInput.value.trim();
 
-  // 3. Create the new list item element
-  const newItem = createListItem(taskText);
+    // 2. Check if the input is empty
+    if (taskText === "") {
+      alert("Please enter a task.");
+      return; // Stop the function if empty
+    }
 
-  // 4. Append the new item to the <ul> element
-  todoList.appendChild(newItem);
+    // --- NEW LOGIC: Remove the initial instruction message ---
+    const initialMessage = document.getElementById("initial-message");
+    if (initialMessage) {
+      initialMessage.remove();
+    }
+    // --------------------------------------------------------
 
-  // 5. Clear the input field for the next task
-  todoInput.value = "";
-}
+    // 3. Create the new list item element
+    const newItem = createListItem(taskText);
+
+    // 4. Append the new item to the <ul> element
+    todoList.appendChild(newItem);
+
+    // 5. Clear the input field for the next task
+    todoInput.value = "";
+  }  
 
 // --- 4. Event Listeners ---
 // Add the addTask function as the handler for the form's submit event.

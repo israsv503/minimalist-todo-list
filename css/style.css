@@ -96,6 +96,8 @@ header h1 {
 .task-text {
   flex-grow: 1;
   cursor: pointer;
+  color: #6c757d;
+  font-style: italic;
 }
 
 /* Styling for completed tasks */
